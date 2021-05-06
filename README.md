@@ -1,5 +1,5 @@
-[![build](https://github.com/latchset/tang/workflows/build/badge.svg)](https://github.com/latchset/tang/actions)
-[![coverage](https://codecov.io/gh/latchset/tang/branch/master/graph/badge.svg)](https://codecov.io/gh/latchset/tang)
+[![build](https://github.com/hdholm/tang/workflows/build/badge.svg)](https://github.com/hdholm/tang/actions)
+[![coverage](https://codecov.io/gh/hdholm/tang/branch/master/graph/badge.svg)](https://codecov.io/gh/hdholm/tang)
 
 # Tang
 
