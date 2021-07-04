@@ -1,5 +1,5 @@
 [![build](https://github.com/hdholm/tang/actions/workflows/build.yml/badge.svg?branch=local-workflows)](https://github.com/hdholm/tang/actions/workflows/build.yml)
-[![coverage](https://github.com/hdholm/tang/actions/workflows/coverage.yml/badge.svg?branch=local-workflows)](https://github.com/hdholm/tang/actions/workflows/coverage.yml)
+[![codecov](https://codecov.io/gh/hdholm/tang/branch/master/graph/badge.svg?token=XK6W6VU5LW)](https://codecov.io/gh/hdholm/tang)
 # Tang
 
 ## Welcome to Tang!
