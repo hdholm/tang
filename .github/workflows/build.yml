@@ -12,7 +12,7 @@ jobs:
         os:
           - fedora:latest
           - centos:7
-          - centos:8
+          - quay.io/centos/centos:stream8
           - debian:testing
           - debian:latest
           - ubuntu:rolling
@@ -22,6 +22,8 @@ jobs:
           - os: fedora:rawhide
             stable: false
           - os: ubuntu:devel
+            stable: false
+          - os: quay.io/centos/centos:stream9
             stable: false
     steps:
       - uses: actions/checkout@v2
