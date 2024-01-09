@@ -19,12 +19,27 @@
 
 #pragma once
 
-#include <http_parser.h>
 #include <sys/types.h>
 #include <regex.h>
 
+#ifdef USE_LLHTTP
+#include <llhttp.h>
+
+typedef llhttp_method_t http_method_t;
+typedef llhttp_status_t http_status_t;
+typedef llhttp_settings_t http_settings_t;
+typedef llhttp_t http_parser_t;
+#else
+#include <http_parser.h>
+/* Legacy http-parser. */
+typedef enum http_method http_method_t;
+typedef enum http_status http_status_t;
+typedef http_parser_settings http_settings_t;
+typedef struct http_parser http_parser_t;
+#endif /* USE_LLHTTP */
+
 struct http_dispatch {
-    int (*func)(enum http_method method, const char *path,
+    int (*func)(http_method_t method, const char *path,
                 const char *body, regmatch_t matches[], void *misc);
     uint64_t methods;
     size_t nmatches;
@@ -43,11 +58,11 @@ struct http_state {
     void *misc;
 };
 
-extern const http_parser_settings http_settings;
+extern const http_settings_t http_settings;
 
 int __attribute__ ((format(printf, 4, 5)))
 http_reply(const char *file, int line,
-           enum http_status code, const char *fmt, ...);
+           http_status_t code, const char *fmt, ...);
 
 #define http_reply(code, ...) \
     http_reply(__FILE__, __LINE__, code, __VA_ARGS__)
