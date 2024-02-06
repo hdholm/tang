@@ -58,6 +58,7 @@ jobs:
           file: build/coverage.xml
           fail_ci_if_error: true # optional (default = false)
           verbose: true # optional (default = false)
+          token: ${{ secrets.CODECOV_TOKEN }}
 
     container:
       image: ${{matrix.os}}
