@@ -22,10 +22,8 @@ jobs:
           - debian:testing
           - debian:latest
           - ubuntu:rolling
-          - ubuntu:lunar
           - ubuntu:jammy
           - ubuntu:focal
-          - ubuntu:bionic
         stable: [true]
         include:
           - os: quay.io/fedora/fedora:rawhide
