@@ -21,6 +21,7 @@ jobs:
           - quay.io/centos/centos:stream9
           - debian:testing
           - debian:latest
+          - ubuntu:latest
           - ubuntu:rolling
           - ubuntu:jammy
           - ubuntu:focal
