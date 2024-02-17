@@ -54,11 +54,13 @@ jobs:
           gcovr -r .. -f ../src -f src/ -e ../tests -e tests -x coverage.xml
 
       - uses: codecov/codecov-action@v4
+        env:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: hdholm/tang
         with:
           file: build/coverage.xml
           fail_ci_if_error: true # optional (default = false)
           verbose: true # optional (default = false)
-          token: ${{ secrets.CODECOV_TOKEN }}
 
     container:
       image: ${{matrix.os}}
