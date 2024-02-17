@@ -31,8 +31,6 @@ jobs:
             stable: false
           - os: ubuntu:devel
             stable: false
-          - os: centos:7
-            stable: false
     steps:
       - uses: actions/checkout@v4
 
