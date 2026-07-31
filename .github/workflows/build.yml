@@ -17,13 +17,13 @@ jobs:
       matrix:
         os:
           - fedora:latest
-          - quay.io/centos/centos:stream8
+          - quay.io/centos/centos:stream10
           - quay.io/centos/centos:stream9
           - debian:testing
           - debian:latest
           - ubuntu:latest
           - ubuntu:rolling
-          - ubuntu:lunar
+          - ubuntu:noble
           - ubuntu:jammy
           - ubuntu:focal
         stable: [true]
